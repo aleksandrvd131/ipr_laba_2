@@ -1,0 +1,42 @@
+services:
+  frontend:
+    build: .
+    image: aleksandrvd131/frontend:latest
+    container_name: frontend
+    ports:
+      - "8080:80"
+    networks:
+      - app-net
+    depends_on:
+      - api
+
+  api:
+    image: containous/whoami
+    container_name: api
+    networks:
+      - app-net
+
+  logger:
+      image: busybox:latest
+      container_name: logger
+      restart: always
+      command:
+        - /bin/sh
+        - -c
+        - |
+          while true; do
+            echo "$$(date '+%Y-%m-%d %H:%M:%S') - heartbeat from logger service" >> /data/log.txt
+            sleep 2
+          done
+      volumes:
+        - logger_data:/data
+      networks:
+        - app-net
+
+volumes:
+  logger_data:
+    name: logger_data
+
+networks:
+  app-net:
+    driver: bridge

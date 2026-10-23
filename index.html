@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внутренний сервис компании</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: #1e293b;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            max-width: 520px;
+            width: 100%;
+            border: 1px solid #334155;
+        }
+        h1 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: #38bdf8;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 0.75rem;
+        }
+        .info-row {
+            margin: 1rem 0;
+            font-size: 1.05rem;
+        }
+        .label {
+            color: #94a3b8;
+            font-weight: 600;
+        }
+        .value {
+            color: #f1f5f9;
+            font-family: monospace;
+        }
+        .badge {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Внутренний сервис компании</h1>
+        <div class="info-row">
+            <span class="label">Разработчик:</span>
+            <span class="value">Ведышев Александр Юрьевич</span>
+        </div>
+        <div class="info-row">
+            <span class="label">GitHub:</span>
+            <span class="value">aleksandrvd131</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Docker Hub:</span>
+            <span class="value">aleksandrvd131</span>
+        </div>
+        <div class="badge">Nginx Alpine Custom Image</div>
+    </div>
+</body>
+</html>
